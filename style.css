@@ -1,0 +1,131 @@
+/*defaults to large screens*/
+/*variable declaration*/
+:root {
+	--header_fill: #ffffffff;
+	--pagecontainer_fill: #ffffffb0;
+}
+
+body {
+	background-image: url('assets/bg_space.png');
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+	font-family: 'Source Sans Pro';
+	font-size: 18px;
+}
+
+/*font styling*/
+h1, .h1 {
+	font-family: 'Rubik';
+	font-size: 40px;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+h2, .h2 {
+	font-size: 28px;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+h3, .h3 {
+	font-size: 24px;
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+p, .p {
+	margin-top: 0px;
+	margin-bottom: 16px;
+}
+
+.left {
+	text-align: left;
+}
+
+.right {
+	text-align: right;
+}
+
+/*end font styling*/
+
+div.page-container {
+	background-color: var(--pagecontainer_fill);
+	width: 80%;
+	margin-left: auto; margin-right: auto;
+}
+
+.header {
+	background-color: var(--header_fill);
+	width: 100%;
+	padding-top: 1%; margin-bottom: 1%;
+}
+
+.filter {
+	
+}
+
+.container {
+	padding-bottom: 1%;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn-container {
+	list-style: none;
+	padding: 0px;
+	justify-content: center;
+	gap: 1%;
+}
+
+.project-container {
+	margin-left: 10%; margin-right: 10%;
+}
+
+.project-info {
+	justify-content: space-between;
+}
+
+.project-info .project-img {
+	width: 23%;
+}
+
+.project-info .project-blurb {
+	width: 73%;
+}
+
+/*This style (confirm-required) will be put on anything that needs one to confirm they're 18+ and OK with potentially seeing mature content before they view the thing itself.
+The div will have you click to confirm, so it should be hidden by default.*/
+.confirm-required div {
+	display: none;
+}
+
+img {
+	width: 100%;
+}
+
+/*tablet/laptop (medium screens, 992px - 600px)*/
+@media screen and (max-width: 992px) {
+	div.page-container {
+		width: 90%;
+	}
+	.row {
+		flex-wrap: wrap;
+	}
+}
+
+/*mobile phone (small screens, 600px or less)*/
+@media screen and (max-width: 600px) {
+	div.page-container {
+		width: 100%;
+	}
+	
+}
