@@ -5,17 +5,17 @@
 	--pagecontainer_fill: #ffffffc0;
 	
 	--dropdown_fill: #ffffff00;
-	--dropdownselected_fill: #ffffffc0;
+	--dropdownselected_fill: #ffffffa0;
 	
 	--textcolor: #000000;
-	--acolor: #0000ff;
-	--ahover: #0088ff;
-	--warn_text: #cc3300;
+	--acolor: #5500ff;
+	--ahover: #bb44ff;
+	--warn_text: #dd3322;
 }
 
 body {
-	background-color: #404a95;
-	background-image: url('assets/bg_space.png');
+	background-color: #674095; /*space: #404a95*/
+	background-image: url('assets/bg_sparkleocean.png');
 	background-size: cover;
 	background-attachment: fixed;
 	text-align: center;

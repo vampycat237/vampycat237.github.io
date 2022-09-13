@@ -48,31 +48,46 @@ function checkThemePreference() {
 const themeDefault = {
 	name: "default",
 	
-	header_fill : "#ffffffff",
+	header_fill : "#fff",
+	pagecontainer_fill : "#ffffffc0",
+	
+	dropdown_fill: "#ffffff00",
+	dropdownselected_fill: "#ffffffa0",
+	
+	textcolor: "#000",
+	acolor: "#50f",
+	ahover: "#b4f",
+	warn_text: "#d32"
+}
+
+const themeBlue = {
+	name: "default_blue",
+	
+	header_fill : "#fff",
 	pagecontainer_fill : "#ffffffc0",
 	
 	dropdown_fill: "#ffffff00",
 	dropdownselected_fill: "#ffffffc0",
 	
-	textcolor: "#000000",
-	acolor: "#0000ff",
-	ahover: "#0088ff",
-	warn_text: "#cc3300"
+	textcolor: "#000",
+	acolor: "#00f",
+	ahover: "#08f",
+	warn_text: "#c30"
 }
 
 const themeHighContrast = {
 	name: "highContrast",
 	
-	header_fill : "#ffffffff",
-	pagecontainer_fill : "#ddddddff",
+	header_fill : "#fff",
+	pagecontainer_fill : "#e3daea",
 	
 	dropdown_fill: "#ffffff00",
 	dropdownselected_fill: "#ffffffff",
 	
-	textcolor: "#000000",
-	acolor: "#0000ff",
-	ahover: "#0088ff",
-	warn_text: "#aa3300"
+	textcolor: "#000",
+	acolor: "#50f",
+	ahover: "#b4f",
+	warn_text: "#d32"
 }
 
 const r = document.querySelector(':root');
