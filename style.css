@@ -2,7 +2,15 @@
 /*variable declaration*/
 :root {
 	--header_fill: #ffffffff;
-	--pagecontainer_fill: #ffffffb0;
+	--pagecontainer_fill: #ffffffc0;
+	
+	--dropdown_fill: #ffffff00;
+	--dropdownselected_fill: #ffffffc0;
+	
+	--textcolor: #000000;
+	--acolor: #0000ff;
+	--ahover: #0088ff;
+	--warn_text: #cc3300;
 }
 
 body {
@@ -12,6 +20,7 @@ body {
 	text-align: center;
 	font-family: 'Source Sans Pro';
 	font-size: 18px;
+	color: var(--textcolor);
 }
 
 /*font styling*/
@@ -19,24 +28,46 @@ h1, .h1 {
 	font-family: 'Rubik';
 	font-size: 40px;
 	margin-top: 0px;
-	margin-bottom: 16px;
+	margin-bottom: 1%;
 }
 
 h2, .h2 {
 	font-size: 28px;
 	margin-top: 0px;
-	margin-bottom: 16px;
+	margin-bottom: 0.5%;
 }
 
 h3, .h3 {
 	font-size: 24px;
 	margin-top: 0px;
-	margin-bottom: 16px;
+	margin-bottom: 1%;
 }
 
 p, .p {
 	margin-top: 0px;
-	margin-bottom: 16px;
+	margin-bottom: 1%;
+}
+
+a, .a { color: var(--acolor); }
+
+a:hover, .a:hover, a:focus, .a:focus { color: var(--ahover); }
+
+button {
+	font-size: inherit;
+}
+
+button.nonbutton {
+	border: 0px;
+	padding: 0;
+	background-color: transparent;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+}
+
+.warn {
+	color: var(--warn_text);
+	font-weight: 900;
 }
 
 .left {
@@ -61,12 +92,18 @@ div.page-container {
 	padding-top: 1%; margin-bottom: 1%;
 }
 
+.container.header {
+	padding-left: 0; padding-right: 0;
+}
+
 .filter {
 	
 }
 
 .container {
-	padding-bottom: 1%;
+	padding-bottom: 0.5%; padding-top: 0.5%;
+	padding-left: 3%; padding-right: 3%;
+	margin-bottom: 1%;
 }
 
 .row {
@@ -84,6 +121,7 @@ div.page-container {
 	padding: 0px;
 	justify-content: center;
 	gap: 1%;
+	margin: 0px;
 }
 
 .project-container {
@@ -110,6 +148,65 @@ The div will have you click to confirm, so it should be hidden by default.*/
 
 img {
 	width: 100%;
+}
+
+/*button styling*/
+.btn {
+	box-sizing: border-box;
+	border: 1px solid #000000;
+	padding: 1vw;
+	color: inherit;
+}
+
+li {
+	display: flex;
+	text-align: center;
+	align-self: center;
+}
+
+/*dropdowns - swiped from my bayartcounter v2 with some edits*/
+.dropdown-holder {
+	flex-direction: column;
+	background-color: var(--dropdown_fill);
+	transition: 2s;
+}
+
+.dropdown-holder.selected {
+	background-color: var(--dropdownselected_fill);
+}
+
+/*v2's dropdowns/expand on click-s*/
+.dropdown-holder > .dropdown-contents {
+	/*styling for the dropdown content holder*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: auto;
+	max-height: 0vw;
+	overflow: clip;
+	
+	transition: 2s;
+}
+.dropdown-holder.selected > .dropdown-contents {
+	/*so we can set things to "selected" to keep them expanded*/
+	max-height: 30vw;
+}
+
+.dropdown-holder.large.selected > .dropdown-contents {
+	max-height: 80vw;
+}
+
+/*floating buttons*/
+.btn.floating {
+	position: absolute;
+	top: 5px; right: 5px;
+}
+
+ul.stepguide {
+	width: 70%;
+	gap: 5%;
+	margin-top: 0.5%;
+	margin-bottom: 0.5%;
 }
 
 /*tablet/laptop (medium screens, 992px - 600px)*/

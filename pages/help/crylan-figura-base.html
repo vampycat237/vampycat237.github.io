@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vampycat237 [help: crylan figura base]</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css" />
+	
+	<!--font stuff-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+</head>
+<body onload="loadTheme()">
+
+<div class="page-container">
+<button id="theme-button" class="btn floating" onclick="toggleHighContrast()">improve visibility</button>
+
+<div class="container header">
+	<h1 id="page-header">help and guides: crylan minecraft figura base</h1>
+	<h3 id="page-subheader">guide to using the base and guide to updating your avatar for 0.1.0-rc7 (latest version as of writing)</h3>
+	<ul id="navbar" class="row btn-container">
+		<li><a class="btn" href="../../index.html">home</a></li>
+		<li><a class="btn" href="https://vampycat237.carrd.co">art commissions</a></li>
+		<li><a class="btn" href="../projects.html">coding & web design projects</a></li>
+		<li><a class="btn" href="https://ko-fi.com/vampycat237">tip jar / store</a></li>
+		<li><a class="btn" href="https://vampycat237.carrd.co/#contact">contact info</a></li>
+		<li><a class="btn" href="https://vampycat237.carrd.co/#socials">socials</a></li>
+		<li><a class="btn" href="../help.html">need help with my products?</a></li>
+	</ul>
+</div>
+
+<div id="using-the-base" class="container column dropdown-holder" onclick="showHide('using-the-base')">
+	<h2 id="using-the-base-header">using the base <button class="nonbutton a">[show]</button></h2>
+	<div class="dropdown-contents">
+		<p>This guide will help walk you through getting into Blockbench to recolor & paint the textures there. It will not cover editing the model itself, but you can absolutely do that!</p>
+		<ul class="left stepguide">
+			<p><strong>Step 1:</strong> Unpack the *.zip folder you downloaded to a new folder. Name that folder whatever you like - if your skin is based on a character, I'd reccomend naming it after the character.</p>
+			<p><strong>Step 2:</strong> Open <a href="https://www.blockbench.net/">Blockbench</a>. You can download the app, or <a href="https://web.blockbench.net/">use the web app</a>, but it is highly reccomended to edit the textures in Blockbench to make sure your skin will display correctly in the rewrite versions of figura.</p>
+			<p><strong>Step 3:</strong> Select "Open Model", and navigate to your unpacked folder. Select the player_model.bbmodel</p>
+			<p><strong>Step 4:</strong> Use "Paint" mode to recolor the textures as you please! (Tip: Setting the Paint Bucket tool to Colors will recolor everything on the texture of a matching color, while Connected Colors will work like a normal fill bucket.)</p>
+			<p><strong>Step 5:</strong> Save your work (regularly) by saving over the player_model.bbmodel, and saving the texture over the texture.png if it isn't saving over it automatically.</p>
+			<p><strong>Step 6:</strong> Once all your work is saved, move it into the figura avatars folder (you can get here from in-game if you open up the figura wardrobe, there is a button that takes you to the right folder!) and you should see it appear in-game!</p>
+		</ul>
+		<p>If you are having issues with the script, it is likely that you are using the wrong version of the base. Check the below guide for help with that.</p>
+	</div>
+</div>
+
+<div id="updating-to-beta" class="container column dropdown-holder large" onclick="showHide('updating-to-beta')">
+	<h2 id="updating-to-beta-header">updating from alpha 8 to the beta/rewrite releases (made for 0.1.0-rc7) <button class="nonbutton a">[show]</button></h2>
+	<div class="dropdown-contents">
+	<p>This guide will walk you through updating your existing model made for alpha 8 to the new version of the base for the rewrite, without losing your customized texture.</p>
+	<p class="warn">Before starting, if you have packed your customized avatar into a *.zip folder, unpack it. The beta versions of Figura will not load avatars from *.zip files.</p>
+	
+	<ul class="left stepguide">
+	<p>Step 1: Back up the existing/old version of your avatar by copying the folder to another location. You will leave this backup unchanged in case something goes wrong.</p>
+	<p>Step 2: Download the new version of the avatar base and unpack the *.zip file to a <strong>new</strong> folder.</p>
+	<p>Step 3: Move your existing avatar's folder from ".minecraft/figura/model_files" to ".minecraft/figura/avatars". If that folder does not yet exist, create it, or run the game with the beta version of figura and it will create it for you.</p>
+	<p>Step 4: Copy <strong>only</strong> the following files from the new base to your avatar's folder: "script.lua", "avatar.json". Yes, replace the old script with the new script.</p>
+	<p>Step 5 (optional): Open "avatar.json" with your text editor of choice (notepad will work just fine) and: 
+	<ul class="left stepguide">
+		<p>5a: Change the value for "name" (where it said "Crylan Base" in quotes) to whatever you like, making sure it stays in the quotes. Having this value match your folder's name is reccomended.</p>
+		<p>5b: In "authors", change "your_username_here" to your username, if you'd like. Keep it  in quotes.</p>
+	</ul>
+	</p>
+	</ul>
+	
+	<p>And you should be good to go! However, if you're having an issue where your customized skin is not displaying on the model, follow the following extra steps (sorry!):</p>
+	
+	<ul class="left stepguide">
+	<p>Step 6: Open your model in <a href="https://www.blockbench.net/">Blockbench.</a> (Instructions on this are under using the base!)</p>
+	<p>Step 7: You should notice that the texture your model is using is not the one you customized. Go ahead and right click that texture and select "Change File", then select the correct texture file. (You'll be able to see it on the model, so it should be clear if you've selected the wrong texture.)</p>
+	<p>Step 8: Save over your previous player_model.bbmodel with this fixed one, then check in-game to make sure it's working correctly.</p>
+	</ul>
+	<p>And <strong>now</strong> you should be good to go!</p>
+	</div>
+</div>
+
+<div class="container">
+	<p>Still having trouble? Feel free to <a href="https://vampycat237.carrd.co/#contact">contact me!</a> I'll do my best to help you out :)</p>
+</div>
+
+<script src="../../script.js"></script>
+</body>
+</html>

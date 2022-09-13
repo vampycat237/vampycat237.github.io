@@ -9,27 +9,35 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body onload="loadTheme()">
 
 <div class="page-container">
+<button id="theme-button" class="btn floating" onclick="toggleHighContrast()">improve visibility</button>
+
 <div class="container header">
 	<h1 id="page-header">hi! i'm vampycat237</h1>
 	<h3 id="page-subheader">here you can find my commission info and various projects i've done :)</h3>
 	<ul id="navbar" class="row btn-container">
+		<li><a class="btn" href="index.html">home</a></li>
 		<li><a class="btn" href="https://vampycat237.carrd.co">art commissions</a></li>
-		<li><a class="btn" href="projects.html">coding & web design projects</a></li>
+		<li><a class="btn" href="pages/projects.html">coding & web design projects</a></li>
 		<li><a class="btn" href="https://ko-fi.com/vampycat237">tip jar / store</a></li>
 		<li><a class="btn" href="https://vampycat237.carrd.co/#contact">contact info</a></li>
-		<li><a class="btn" href="">socials</a></li>
-		<li><a class="btn" href="">button template</a></li>
+		<li><a class="btn" href="https://vampycat237.carrd.co/#socials">socials</a></li>
+		<li><a class="btn" href="pages/help.html">need help with my products?</a></li>
 	</ul>
 </div>
 
-<div id="test" class="container confirm-required" onclick="confirmView('test', 'p')">(test, no mature content)This section may contain mature content. Show anyway?
+<div id="wip-notice" class="container">
+	<p>hi there! this site is highly WIP so a lot of the links up there link out to my carrd.</p>
+	<p>you may also notice that the whole site just feels a little unfinished and that's because it is! i wasn't going to publish it yet but i wanted to have the help pages up so here we are.</p>
+</div>
+
+<!--<div id="test" class="container confirm-required" onclick="confirmView('test', 'p')">(test, no mature content)This section may contain mature content. Show anyway?
 	<div id="test-content">
 	<p>just a test!</p>
 	</div>
-</div>
+</div>-->
 
 <script src="script.js"></script>
 </body>
