@@ -1,4 +1,4 @@
-var siteTheme;
+var siteTheme = "default";
 
 function siteIsHighContrast() {
 	return siteTheme == "highContrast";
@@ -21,7 +21,6 @@ function checkThemePreference() {
 			cookieValue=cookieValue.substring(0,cookieValue.indexOf(";"))
 		}
 		
-		console.log(cookieValue);
 		//check for expected values
 		if (cookieValue == "default" || cookieValue == "highContrast") {
 			return cookieValue;
@@ -113,7 +112,6 @@ function setTheme(themeObject = themeDefault, buttonText = "reset to default") {
 
 //on load
 function loadTheme() {
-	console.log(checkThemePreference());
 	siteTheme = checkThemePreference();
 	if (siteIsHighContrast()) {
 		setTheme(themeHighContrast, "reset to default");
