@@ -11,6 +11,9 @@
 	--acolor: #5500ff;
 	--ahover: #bb44ff;
 	--warn_text: #dd3322;
+	
+	--transition_time: 2s;
+	--font_size: 18px;
 }
 
 body {
@@ -20,7 +23,7 @@ body {
 	background-attachment: fixed;
 	text-align: center;
 	font-family: 'Source Sans Pro';
-	font-size: 18px;
+	font-size: var(--font_size);
 	color: var(--textcolor);
 }
 
@@ -201,10 +204,11 @@ li {
 .dropdown-holder {
 	flex-direction: column;
 	background-color: var(--dropdown_fill);
-	transition: 2s;
+	margin-left: 10%; margin-right: 10%;
+	transition: var(--transition_time);
 }
 
-.dropdown-holder.selected {
+.dropdown-holder.selected, .dropdown-holder:hover, .dropdown-holder:focus {
 	background-color: var(--dropdownselected_fill);
 }
 
@@ -218,7 +222,7 @@ li {
 	max-height: 0vw;
 	overflow: clip;
 	
-	transition: 2s;
+	transition: var(--transition_time);
 }
 .dropdown-holder.selected > .dropdown-contents {
 	/*so we can set things to "selected" to keep them expanded*/
