@@ -160,14 +160,15 @@ function toggleSelected(divId) {
 }
 
 //show/hide dropdowns
-function showHide(divId) {
+//target = addition to the divId we should add if it's not 'header'
+function showHide(divId, target = 'header') {
 	toggleSelected(divId);
 	//find out whether this is expanded or not
 	if (document.getElementById(divId).classList.contains('selected')) {
 		//this element is selected therefore we are expanded and the brackets should say 'hide'
-		editBracketContent(divId+'-header', "hide");
+		editBracketContent(divId + '-' + target, "hide");
 	} else {
-		editBracketContent(divId+'-header', "show");
+		editBracketContent(divId + '-' + target, "show");
 	}
 }
 
@@ -179,4 +180,61 @@ function editBracketContent(elementId, str = "null") {
 	
 	textElement.innerHTML = content + str + ']</button>';
 	
+}
+
+//filter functionality!
+const filterMenu = document.getElementById('filter-menu');
+
+//filters page content (by either collapsing or hiding it) based on the passed in attribute.
+//param targetClass: string of the class we would be showing or hiding based on the filter
+//param targetAttr: when this attribute is present we show its parent targetClass!
+//NOTE: attributes are expected to be COMMA SEPERATED.
+//param category: if applicable, the category this searches for
+function filter(targetClass, targetAttr = "null") {
+	//gather all targets
+	const targetsToCheck = document.getElementsByClassName(targetClass);
+	
+	//if there are none, print an error
+	if (isNaN(targetsToCheck.length) || targetsToCheck.length <= 0) {
+		console.log("filtering failed. reason: could not find any members of class "+targetClass);
+	}
+	
+	//if targetAttr is null or not given we assume we are to reset the filter
+	else if (targetAttr == "null") {
+		for (var i = 0; i < targetsToCheck.length; i++) {
+			show(targetsToCheck[i]);
+		}
+	}
+	
+	//else we assume we are filtering
+	else {
+		for (var i = 0; i < targetsToCheck.length; i++) {
+			var matchFound = false;
+			const attr = targetsToCheck[i].getElementsByTagName('input')[0].value.split(',');
+			//loop through the attributes/tags looking for our desired one
+			for (var a in attr) {
+				//if a match is found we show it, mark matchFound true, and stop looping
+				if (attr[a] == targetAttr) {
+					show(targetsToCheck[i]);
+					matchFound = true;
+					break;
+				}
+			}
+			//we didn't find a match for this one
+			if (!matchFound) {
+				hide(targetsToCheck[i]);
+			}
+		}
+	}
+}
+
+//SHOW AND HIDE METHODS. unrelated to showHide(). semi-ripped from my bayartcounter v2 (as in, they are basically the same but i copied from memory instead of with ctrl-c) but i mean it's MY code so literally who cares lol...
+//param elmnt: HTML DOM element, NOT an id.
+//param d: string, display type when shown. defaults to 'flex'
+function show(elmnt, d = "flex") {
+	elmnt.style.display = d;
+}
+
+function hide(elmnt) {
+	elmnt.style.display = "none";
 }

@@ -11,7 +11,7 @@
 </head>
 <body onload="loadTheme()">
 
-<div class="page-container">
+<div class="page-container" style="padding-bottom: 0.1px;">
 <button id="theme-button" class="btn floating" onclick="toggleHighContrast()">improve visibility</button>
 
 <div class="container header">
@@ -28,59 +28,84 @@
 	</ul>
 </div>
 
-<div id="filter" class="container">filter by: (status, project type) (desired thing) (this doesn't work sorry!)</div>
+<div id="filter" class="row container">filter: 
+	<select id="filter-menu">
+		<option value="null">[reset filter]</option>
+		<option value="fave:true">vampy's faves</option>
+		<option value="status:indev">in development</option>
+		<option value="status:release">released</option>
+		<option value="type:web">websites/web apps</option>
+		<option value="type:game">games</option>
+		<option value="type:mod">mods</option>
+		<option value="why">nothing</option>
+	</select>
+	<button onclick="filter('project-container',filterMenu.value)">apply filter</button>
+</div>
 
-<div id="moonstruck" class="container column project-container">
-	<a class="h2 project-title" href="https://moonstruckdatingsim.tumblr.com/">moonstruck</a>
-	<div class="container row project-info">
+<div id="moonstruck" class="container column project-container dropdown-holder selected" onclick="showHide('moonstruck', 'showhide')">
+	<input id="moonstruck-attributes" type="hidden" value="status:indev,type:game,fave:true"></input>
+	<h2 class="project-title" href="https://moonstruckdatingsim.tumblr.com/">moonstruck <button class="nonbutton a" id="moonstruck-showhide">[hide]</button></h2>
+	<div class="dropdown-contents">
+	  <div class="row project-info">
 		<div class="project-img">
 			<img id="moonstruck-img" src="../assets/projects_moonstruck.png"/>
 		</div>
+		<div class="v-divider"></div>
 		<div class="project-blurb">
-			<h3>status: slow and unsteady</h3>
+			<div class="row pair">
+				<h3>status: slow and unsteady</h3>
+				<div class="v-divider"></div>
+				<h3>links: <a href="https://moonstruckdatingsim.tumblr.com/">[tumblr]</a></h3>
+			</div>
 			<p>i'm working on a visual novel dating simulator called Moonstruck!<br>you can learn more on the Moonstruck devblog :)<br>it's very early on in development so there is no release date.<br>i'm expecting it to take multiple years to get to the point where i feel comfortable giving a release date</p>
 		</div>
+	  </div>
 	</div>
 </div>
 
-<div id="pspsps" class="container column project-container">
-	<a class="h2 project-title" href="#">pspsps rp space</a>
-	<div class="container row project-info">
+<div id="pspsps" class="container column project-container dropdown-holder selected" onclick="showHide('pspsps', 'showhide')">
+	<input id="pspsps-attributes" type="hidden" value="status:hiatus,type:web"></input>
+	<h2 class="project-title">pspsps rp space <button class="nonbutton a" id="pspsps-showhide">[hide]</button></h2>
+	<div class="dropdown-contents">
+	  <div class="row project-info">
 		<div class="project-blurb">
 			<h3>status: hiatus</h3>
-			<p>i'm also making a funny little site for a warriors-inspired feral cat rp server i'm an admin & cat colony owner in!<br>
-the site is planned to have a territory map you can click on to find out more information about different locations<br>
-it's a successor to <a href="https://pspspspswarriorcats.carrd.co/">this carrd i made</a> and will have much more
-than just herb locations and uses - ideally it will have lore blurbs
-for each colony, and lists of cats who live in each colony too<br>
-also fun fact this was my first attempt at web design!</p>
+			<p>i'm also making a funny little site for a warriors-inspired feral cat rp server i'm an admin & cat colony owner in!<br>the site is planned to have a territory map you can click on to find out more information about different locations.<br>it's a successor to <a href="https://pspspspswarriorcats.carrd.co/">this carrd i made</a> and will have much more than just herb locations and uses - ideally it will have lore blurbs for each colony, and lists of cats who live in each colony too!<br>also fun fact this was my first attempt at web design!</p>
 		</div>
 		<div class="project-img">
 			
 			<img id="pspsps-img" src="assets/projects_pspsps.png"/>
 		</div>
+	  </div>
 	</div>
 </div>
 
-
-<div id="bayartcounter" class="container column project-container">
-	<a class="h2 project-title" href="https://vampycat237.github.io/bayartcounter">vampy's bayartcounter</a>
-	<h3>status: active development</h3>
-	<div class="project-blurb">
+<div id="bayartcounter" class="container column project-container dropdown-holder selected" onclick="showHide('bayartcounter', 'showhide')">
+	<input id="bayartcounter-attributes" type="hidden" value="status:release,status:indev,type:web,fave:true"></input>
+	<h2 class="project-title">vampy's bayartcounter <button class="nonbutton a" id="bayartcounter-showhide">[hide]</button></h2>
+	<div class="project-blurb dropdown-contents">
+		<div class="row pair">
+			<h3>status: active development</h3>
+			<div class="v-divider"></div>
+			<h3>links: <a href="https://vampycat237.github.io/bayartcounter">[site]</a> <a href="https://github.com/vampycat237/bayartcounter">[source]</a></h3>
+		</div>
 		<p>i got into this semi-open species called bayfoxes a little while ago, and the species is set up like an art RPG which i find pretty fun. however i did not find counting how many shells my art was supposed to get me very fun and figured 'hey, why not write a program to do it for me?' and then i thought 'what if it was web based, so other people could use it too?' and then i. learned javascript to make this funny little thing.</p>
 	</div>
 </div>
 
-<div id="clowdersim" class="container column project-container">
-	<a class="h2 project-title" href="#">clowder simulator</a>
-	<div class="container row project-info">
+<div id="clowdersim" class="container column project-container dropdown-holder selected" onclick="showHide('clowdersim', 'showhide')">
+	<input id="clowdersim-attributes" type="hidden" value="status:indev,type:game,fave:true"></input>
+	<h2 class="project-title">clowder simulator <button class="nonbutton a" id="clowdersim-showhide">[hide]</button></h2>
+	<div class="dropdown-contents">
+	  <div class="row project-info">
 		<div class="project-img">
-			<img id="moonstruck-img" src="assets/projects_clowdersim.png"/>
+			<img id="clowdersim-img" src="assets/projects_clowdersim.png"/>
 		</div>
 		<div class="project-blurb">
 			<h3>status: just starting work</h3>
 			<p>just a neat little idea really but i've been messing with the idea of making a Warriors-inspired cat life sim.<br>you'd control your little group of cats (a clowder!) and decide how they live within their environment.<br>it's really early on so i don't want to promise too much but like, a lot of the inspiration is sims 3 warrior cats legacy challenges lol<br>as for technical details currently i'm planning on making it in Godot using C#.<br>if i stick with it long enough that there's a useable product, i'd be putting it up on itch.io most likely!<br>but that's a long ways out, and pretty wishful thinking. i hope i stick with it though! could be really neat!</p>
 		</div>
+	  </div>
 	</div>
 </div>
 

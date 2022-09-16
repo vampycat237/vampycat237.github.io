@@ -1,13 +1,13 @@
 /*defaults to large screens*/
 /*variable declaration*/
 :root {
-	--header_fill: #ffffffff;
+	--header_fill: #fff;
 	--pagecontainer_fill: #ffffffc0;
 	
 	--dropdown_fill: #ffffff00;
 	--dropdownselected_fill: #ffffffa0;
 	
-	--textcolor: #000000;
+	--textcolor: #000;
 	--acolor: #5500ff;
 	--ahover: #bb44ff;
 	--warn_text: #dd3322;
@@ -125,12 +125,19 @@ div.page-container {
 	margin: 0px;
 }
 
+/*projects page stuff*/
+#filter {
+	justify-content: center;
+	gap: 0.5%;
+}
+
 .project-container {
 	margin-left: 10%; margin-right: 10%;
 }
 
 .project-info {
 	justify-content: space-between;
+	width: 100%;
 }
 
 .project-info .project-img {
@@ -139,6 +146,31 @@ div.page-container {
 
 .project-info .project-blurb {
 	width: 73%;
+}
+
+.pair {
+	justify-content: center;
+	gap: 1.5%;
+	width: 100%;
+	margin-bottom: 0.5%;
+}
+
+.pair > * {
+	flex: 1 1 50%;
+	margin: 0;
+}
+/*
+.pair > *:first-child {
+	text-align: right;
+}
+
+.pair > *:last-child {
+	text-align: left;
+}
+*/
+.v-divider {
+	width: 0; max-width: 0;
+	border-left: 1px solid var(--textcolor);
 }
 
 /*This style (confirm-required) will be put on anything that needs one to confirm they're 18+ and OK with potentially seeing mature content before they view the thing itself.
@@ -154,7 +186,7 @@ img {
 /*button styling*/
 .btn {
 	box-sizing: border-box;
-	border: 1px solid #000000;
+	border: 1px solid var(--textcolor);
 	padding: 1vw;
 	color: inherit;
 }
