@@ -91,7 +91,8 @@ const themeHighContrast = {
 }
 
 const r = document.querySelector(':root');
-const themebutton = document.getElementById('theme-button');
+const themebutton = document.getElementById('theme-button-text');
+const themeicon   = document.getElementById('theme-button-icon');
 
 //put the site into high contrast mode and REMEMBER IT!!
 function toggleHighContrast() {
@@ -101,12 +102,12 @@ function toggleHighContrast() {
 		
 	} else {
 		//we are making site high contrast
-		setTheme(themeHighContrast, "reset to default");
+		setTheme(themeHighContrast, "reset to default", "-no");
 	}
 }
 
 //Parameters: object themeObject, string buttonText
-function setTheme(themeObject = themeDefault, buttonText = "reset to default") {
+function setTheme(themeObject = themeDefault, buttonText = "reset to default", iconVariant = "") {
 	//set siteTheme variable
 	siteTheme = themeObject.name;
 	
@@ -122,6 +123,8 @@ function setTheme(themeObject = themeDefault, buttonText = "reset to default") {
 	r.style.setProperty('--warn_text', themeObject.warn_text);
 	
 	themebutton.innerHTML = buttonText;
+	themeicon.alt = buttonText;
+	themeicon.src = "../assets/icons/eye"+iconVariant+".png";
 	setThemePreference(themeObject.name);
 }
 

@@ -12,7 +12,11 @@
 <body onload="loadTheme()">
 
 <div class="page-container" style="padding-bottom: 0.1px;">
-<button id="theme-button" class="btn floating" onclick="toggleHighContrast()">improve visibility</button>
+<button id="theme-button" class="row btn floating" onclick="toggleHighContrast()">
+	<img id="theme-button-icon" src="../assets/icons/eye.png" alt="improve visibility"></img>
+	<div id="theme-button-spacer" style="width: 0.5vw"></div>
+	<span id="theme-button-text">improve visibility</span>
+</button>
 
 <div class="container header">
 	<h1 id="page-header">vampycat237's projects</h1>
@@ -20,7 +24,7 @@
 	<ul id="navbar" class="row btn-container">
 		<li><a class="btn" href="../index.html">home</a></li>
 		<li><a class="btn" href="https://vampycat237.carrd.co">art commissions</a></li>
-		<li><a class="btn" href="projects.html">coding & web design projects</a></li>
+		<li><a class="btn" href="projects.html">my projects</a></li>
 		<li><a class="btn" href="https://ko-fi.com/vampycat237">tip jar / store</a></li>
 		<li><a class="btn" href="https://vampycat237.carrd.co/#contact">contact info</a></li>
 		<li><a class="btn" href="https://vampycat237.carrd.co/#socials">socials</a></li>

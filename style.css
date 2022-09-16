@@ -92,12 +92,12 @@ div.page-container {
 
 .header {
 	background-color: var(--header_fill);
-	width: 100%;
+	/*width: 100%;*/
 	padding-top: 1%; margin-bottom: 1%;
 }
 
 .container.header {
-	padding-left: 0; padding-right: 0;
+	padding-left: 0.5vw; padding-right: 0.5vw;
 }
 
 .filter {
@@ -124,8 +124,10 @@ div.page-container {
 	list-style: none;
 	padding: 0px;
 	justify-content: center;
-	gap: 1%;
+	gap: 0.5vw;
 	margin: 0px;
+	
+	flex-wrap: wrap;
 }
 
 /*projects page stuff*/
@@ -198,6 +200,11 @@ li {
 	display: flex;
 	text-align: center;
 	align-self: center;
+	flex: 1 1 auto;
+}
+
+li > .btn {
+	width: 100%;
 }
 
 /*dropdowns - swiped from my bayartcounter v2 with some edits*/
@@ -246,20 +253,31 @@ ul.stepguide {
 	margin-bottom: 0.5%;
 }
 
-/*tablet/laptop (medium screens, 992px - 600px)*/
-@media screen and (max-width: 992px) {
+#theme-button-icon {
+	height: 28px; width:28px;
+	display:block;
+	align-self:center;
+}
+
+/*media query breakpoints based on https://docs.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design*/
+/*tablet/laptop (medium screens, 1007px - 641px)*/
+@media screen and (max-width: 1007px) {
 	div.page-container {
 		width: 90%;
 	}
-	.row {
-		flex-wrap: wrap;
+	
+	#theme-button-icon {
+		height: 36px; width:36px;
+	}
+	
+	#theme-button-spacer, #theme-button-text {
+		display:none;
 	}
 }
 
-/*mobile phone (small screens, 600px or less)*/
-@media screen and (max-width: 600px) {
+/*mobile phone (small screens, 640px or less)*/
+@media screen and (max-width: 640px) {
 	div.page-container {
 		width: 100%;
 	}
-	
 }
