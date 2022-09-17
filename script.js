@@ -102,7 +102,7 @@ function toggleHighContrast() {
 		
 	} else {
 		//we are making site high contrast
-		setTheme(themeHighContrast, "reset to default", "-no");
+		setTheme(themeHighContrast, "reset to default", "-closed");
 	}
 }
 
@@ -124,7 +124,8 @@ function setTheme(themeObject = themeDefault, buttonText = "reset to default", i
 	
 	themebutton.innerHTML = buttonText;
 	themeicon.alt = buttonText;
-	themeicon.src = "../assets/icons/eye"+iconVariant+".png";
+	console.log(themeicon.src.substring(0,themeicon.src.indexOf("eye")));
+	themeicon.src = themeicon.src.substring(0,themeicon.src.indexOf("eye"))+"eye"+iconVariant+".png";
 	setThemePreference(themeObject.name);
 }
 
