@@ -81,7 +81,11 @@ button.nonbutton {
 .right {
 	text-align: right;
 }
-
+/*
+#page-subheader, .project-title {
+	margin-bottom: 0;
+}
+*/
 /*end font styling*/
 
 div.page-container {
@@ -105,9 +109,9 @@ div.page-container {
 }
 
 .container {
-	padding-bottom: 0.5%; padding-top: 0.5%;
+	padding-bottom: 0.5vw; padding-top: 0.5vw;
 	padding-left: 3%; padding-right: 3%;
-	margin-bottom: 1%;
+	margin-bottom: 0.5vw;
 }
 
 .row {
@@ -121,11 +125,13 @@ div.page-container {
 }
 
 .btn-container {
+	display: flex;
 	list-style: none;
-	padding: 0px;
+	padding: 0;
 	justify-content: center;
 	gap: 0.5vw;
-	margin: 0px;
+	margin: 0;
+	/*margin-bottom: 0.5vw;*/
 	
 	flex-wrap: wrap;
 }
@@ -133,7 +139,7 @@ div.page-container {
 /*projects page stuff*/
 #filter {
 	justify-content: center;
-	gap: 0.5%;
+	gap: 0.5vw;
 }
 
 .project-container {
@@ -141,6 +147,7 @@ div.page-container {
 }
 
 .project-info {
+	margin-top: 0.5vw;
 	justify-content: space-between;
 	width: 100%;
 }
@@ -155,7 +162,7 @@ div.page-container {
 
 .pair {
 	justify-content: center;
-	gap: 1.5%;
+	gap: 0.5vw;
 	width: 100%;
 	margin-bottom: 0.5%;
 }
@@ -164,7 +171,7 @@ div.page-container {
 	flex: 1 1 50%;
 	margin: 0;
 }
-/*
+
 .pair > *:first-child {
 	text-align: right;
 }
@@ -172,7 +179,7 @@ div.page-container {
 .pair > *:last-child {
 	text-align: left;
 }
-*/
+
 .v-divider {
 	width: 0; max-width: 0;
 	border-left: 1px solid var(--textcolor);
