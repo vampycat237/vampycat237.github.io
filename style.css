@@ -14,6 +14,7 @@
 	
 	--transition_time: 2s;
 	--font_size: 18px;
+	--gallery_image_size: 20vw;
 }
 
 body {
@@ -227,7 +228,7 @@ li > .btn {
 }
 
 /*v2's dropdowns/expand on click-s*/
-.dropdown-holder > .dropdown-contents {
+.dropdown-contents {
 	/*styling for the dropdown content holder*/
 	display: flex;
 	flex-direction: column;
@@ -238,12 +239,12 @@ li > .btn {
 	
 	transition: var(--transition_time);
 }
-.dropdown-holder.selected > .dropdown-contents {
+.dropdown-holder.selected > .dropdown-contents, .dropdown-contents.selected {
 	/*so we can set things to "selected" to keep them expanded*/
 	max-height: 30vw;
 }
 
-.dropdown-holder.large.selected > .dropdown-contents {
+.dropdown-holder.large.selected > .dropdown-contents, .dropdown-contents.large.selected {
 	max-height: 80vw;
 }
 
@@ -264,6 +265,43 @@ ul.stepguide {
 	height: 28px; width:28px;
 	display:block;
 	align-self:center;
+}
+
+/*commissions & gallery*/
+.gallery {
+	flex-wrap: wrap;
+	gap: 1vw;
+	justify-content: center;
+}
+
+.gallery.mini img {
+	--gallery_image_size: 15vw;
+}
+
+.gallery img {
+	height: var(--gallery_image_size);
+}
+
+.gallery.column img {
+	width: var(--gallery_image_size);
+	height: auto;
+}
+
+.gallery-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.gallery.mini .gallery-item{
+	max-width: 20vw;
+	height: auto;
+}
+
+.gallery-holder {
+	align-items: start;
+	justify-content: center;
+	gap: 3vw;
 }
 
 /*media query breakpoints based on https://docs.microsoft.com/en-us/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design*/

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vampycat237 [prices]</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+	
+	<!--font stuff-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+</head>
+<body onload="loadTheme()">
+
+<div class="page-container" style="padding-bottom: 0.1px;">
+<button id="theme-button" class="row btn floating" onclick="toggleHighContrast()">
+	<img id="theme-button-icon" src="../assets/icons/eye.png" alt="improve visibility"></img>
+	<div id="theme-button-spacer" style="width: 0.5vw"></div>
+	<span id="theme-button-text">improve visibility</span>
+</button>
+
+<div class="container header">
+	<h1 id="page-header">hi! i'm vampycat237</h1>
+	<h3 id="page-subheader">here you can find my commission info :)</h3>
+	<ul id="navbar" class="row btn-container">
+		<li><a class="btn" href="../index.html">home</a></li>
+		<li><a class="btn" href="#">art commissions</a></li>
+		<li><a class="btn" href="projects.html">my projects</a></li>
+		<li><a class="btn" href="https://ko-fi.com/vampycat237">tip jar / store</a></li>
+		<li><a class="btn" href="https://vampycat237.carrd.co/#contact">contact info</a></li>
+		<li><a class="btn" href="https://vampycat237.carrd.co/#socials">socials</a></li>
+		<li><a class="btn" href="help.html">help / guides</a></li>
+	</ul>
+</div>
+
+<div id="wip-notice" class="container">
+	<p>this page is a work in progress! for now you can find my prices <a href="https://vampycat237.carrd.co">on my carrd</a></p>
+</div>
+
+<div class="container">
+	<ul class="row btn-container">
+		<li><a class="btn" href="#">digital art</a></li>
+		<li><a class="btn" href="#">pixel art</a></li>
+		<li><a class="btn" href="#">3d models</a></li>
+		<li><a class="btn" href="#">character designs</a></li>
+		<li><a class="btn" href="#">web design</a></li>
+		<li><a class="btn" href="#">modding</a></li>
+	</ul>
+</div>
+
+<div id="filter" class="row container" style="display:none">filter: 
+	<select id="filter-menu">
+		<option value="null">[reset filter]</option>
+		<option value="status:open">open only</option>
+		<option value="status:semi-open">open and semi-open</option>
+		<option value="why">nothing</option>
+	</select>
+	<button onclick="filter('project-container',filterMenu.value)">apply filter</button>
+</div>
+
+<div id="digital" class="container column">
+	<h2 class="title">digital art</h2>
+	<h3>base prices</h3>
+	<div class="row gallery">
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery02/2876eef2.jpg?v=6b03d9be">
+			<span>Bust flat color - $20</span>
+		</div>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery02/dedf487b.jpg?v=6b03d9be">
+			<span>Halfbody flat color - $30</span>
+		</div>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery01/5739fb1a.png?v=6b03d9be">
+			<span>Fullbody flat color - $50</span>
+		</div>
+	</div>
+	
+	<h3>lineart texture options</h3>
+	<div class="row gallery mini">
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery02/a5fa5563.jpg?v=6b03d9be">
+			<span>Cleaned-up sketch - $0</span>
+		</div>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery01/73a9a683.jpg?v=6b03d9be">
+			<span>Rough / Fuzzy (default) - $0</span>
+		</div>
+		<!--<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery10/2aeae525.png?v=6b03d9be">
+			<span>Pixel lines</span>
+		</div>-->
+		<div class="gallery-item">
+			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/51028525_7EyYe3rmZJprgAH.png?1656091691">
+			<span>Scratchy - $5</span>
+		</div>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery01/b073c0bf.jpg?v=6b03d9be">
+			<span>Clean & Tidy - $10</span>
+		</div>
+	</div>
+	
+	<div class="row gallery-holder">
+	
+	<div class="column gallery mini">
+		<h3>shading</h3>
+		<span class="gallery-item">Shading comes in both cel and blended. Examples are cel shaded for clarity.</span>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery02/78964b63.jpg?v=6b03d9be">
+			<span>Simple shading - $10</span>
+		</div>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery01/ff242bbb.jpg?v=6b03d9be">
+			<span>Full rendering - $35</span>
+		</div>
+	</div>
+	
+	<div class="column gallery mini">
+		<h3>backgrounds</h3>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery02/6c875e9b.jpg?v=6b03d9be">
+			<span>Simple background - $0<br>
+			(solid color, abstract shapes, gradient, etc)
+			</span>
+		</div>
+		<div class="gallery-item">
+			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/56084309_mpdDZKQmumnAChh.png">
+			<span>Medium background - $35<br>
+			(loose naturescape, space, sky, water, etc)
+			</span>
+		</div>
+		<div class="gallery-item">
+			<img src="https://vampycat237.carrd.co/assets/images/gallery01/b53e93fb.jpg?v=6b03d9be">
+			<span>Complex background - $65<br>
+			(like a room, lineless)
+			</span>
+		</div>
+	</div>
+	
+	<div class="column gallery mini">
+		<h3>misc</h3>
+		<div class="gallery-item">
+			<span>Complex design fee - Up to 20% of total.<br></span>
+			<span>Explanations & examples below. <button class="nonbutton a" id="complexdesign-showhide" onClick="showHide('complexdesign', 'showhide')">[show]</button></span>
+		</div>
+		<div id="complexdesign" class="dropdown-contents large">
+		  <div class="gallery-item">
+			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/47008205_ZowBxaLEbhT4mH1.png">
+			<span>(This design has complex ripple patterns, lots of flowers, and detailed markings. He would probably get a 15% fee.)</span>
+		  </div>
+		  <div class="gallery-item">
+			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/46490501_iOzbCIn8JYqXVz6.png">
+			<span>(The design on the right has a lot of consistently shaped spots, some two-toned. Mint would probably get a 6% fee.)</span>
+		  </div>
+		  <div class="gallery-item">
+			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/38173044_Vt9CodT0EUGMgEo.png?1628481173">
+			<span>(This design has a multi-color gradient that's easy to mess up, and detailed stripes. It would probably get from a 10% fee to a 5% fee depending on how much I can simplify the stripes.)</span>
+		  </div>
+		</div>
+	</div>
+	
+	</div>
+</div>
+
+<div id="moneymachine">
+	<h2>this is a test price calculator, for ease of handing out quotes :)</h2>
+	<p id="cart">your selections go here</p>
+	<p id="total">total goes here</p>
+</div>
+
+<!--<div id="test" class="container confirm-required" onclick="confirmView('test', 'p')">(test, no mature content)This section may contain mature content. Show anyway?
+	<div id="test-content">
+	<p>just a test!</p>
+	</div>
+</div>-->
+
+<script src="../script.js"></script>
+</body>
+</html>

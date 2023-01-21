@@ -1,0 +1,34 @@
+{
+	"digital" : {
+		"base" : {
+			"action"   : "add",
+			"bust"     : 20,
+			"halfbody" : 30,
+			"fullbody" : 50
+		},
+		"lineart" : {
+			"action"      : "add",
+			"fuzzy"       : 0,
+			"cleansketch" : 0,
+			"scratchy"    : 5,
+			"tidy"        : 10
+		},
+		"shading" : {
+			"action" : "add",
+			"simple" : 10,
+			"fullrender" : 35
+		},
+		"backgrounds" : {
+			"action"  : "add",
+			"simple"  : 0,
+			"medium"  : 35,
+			"complex" : 65
+		},
+		"complexdesign" : {
+			"action" : "multiply",
+			"type"   : "range",
+			"min" : 0.00,
+			"max" : 0.20
+		}
+	}
+}
