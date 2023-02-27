@@ -13,7 +13,7 @@
 
 <div class="page-container" style="padding-bottom: 0.1px;">
 <button id="theme-button" class="row btn floating" onclick="toggleHighContrast()">
-	<img id="theme-button-icon" src="../assets/icons/eye.png" alt="improve visibility"></img>
+	<img id="theme-button-icon" src="../assets/icons/eye.png" alt="improve visibility"/>
 	<div id="theme-button-spacer" style="width: 0.5vw"></div>
 	<span id="theme-button-text">improve visibility</span>
 </button>
@@ -33,7 +33,6 @@
 
 <div id="filter" class="row container">filter: 
 	<select id="filter-menu">
-		<option value="null">[reset filter]</option>
 		<option value="fave:true">vampy's faves</option>
 		<option value="status:indev">in development</option>
 		<option value="status:release">released</option>
@@ -41,12 +40,13 @@
 		<option value="type:game">games</option>
 		<option value="type:mod">mods</option>
 		<option value="why">nothing</option>
+		<option value="null">everything</option>
 	</select>
 	<button onclick="filter('project-container',filterMenu.value)">apply filter</button>
 </div>
 
 <div id="moonstruck" class="container column project-container dropdown-holder selected" onclick="showHide('moonstruck', 'showhide')">
-	<input id="moonstruck-attributes" type="hidden" value="status:indev,type:game,fave:true"></input>
+	<input id="moonstruck-attributes" type="hidden" value="status:indev,type:game,fave:true"/>
 	<h2 class="project-title">moonstruck <button class="nonbutton a" id="moonstruck-showhide">[hide]</button></h2>
 	<div class="dropdown-contents">
 	  <div class="row project-info">
@@ -56,7 +56,7 @@
 		<div class="v-divider"></div>
 		<div class="project-blurb">
 			<div class="row pair">
-				<h3>status: slow and unsteady</h3>
+				<h3>status: in development</h3>
 				<div class="v-divider"></div>
 				<h3>links: <a href="https://moonstruckdatingsim.tumblr.com/">[tumblr]</a></h3>
 			</div>
@@ -66,8 +66,8 @@
 	</div>
 </div>
 
-<div id="pspsps" class="container column project-container dropdown-holder selected" onclick="showHide('pspsps', 'showhide')">
-	<input id="pspsps-attributes" type="hidden" value="status:hiatus,type:web"></input>
+<div id="pspsps" class="container column project-container dropdown-holder selected" onclick="showHide('pspsps', 'showhide')" style="display:none;">
+	<input id="pspsps-attributes" type="hidden" value="status:hiatus,type:web"/>
 	<h2 class="project-title">pspsps rp space <button class="nonbutton a" id="pspsps-showhide">[hide]</button></h2>
 	<div class="dropdown-contents">
 	  <div class="row project-info">
@@ -84,7 +84,7 @@
 </div>
 
 <div id="bayartcounter" class="container column project-container dropdown-holder selected" onclick="showHide('bayartcounter', 'showhide')">
-	<input id="bayartcounter-attributes" type="hidden" value="status:release,status:indev,type:web,fave:true"></input>
+	<input id="bayartcounter-attributes" type="hidden" value="status:release,status:indev,type:web,fave:true"/>
 	<h2 class="project-title">vampy's bayartcounter <button class="nonbutton a" id="bayartcounter-showhide">[hide]</button></h2>
 	<div class="project-blurb dropdown-contents">
 		<div class="row pair">
@@ -97,62 +97,47 @@
 </div>
 
 <div id="clowdersim" class="container column project-container dropdown-holder selected" onclick="showHide('clowdersim', 'showhide')">
-	<input id="clowdersim-attributes" type="hidden" value="status:indev,type:game,fave:true"></input>
+	<input id="clowdersim-attributes" type="hidden" value="status:indev,type:game,fave:true"/>
 	<h2 class="project-title">clowder simulator <button class="nonbutton a" id="clowdersim-showhide">[hide]</button></h2>
-	<div class="dropdown-contents">
-	  <div class="row project-info">
+	<div class="project-blurb dropdown-contents">
+	  <!--<div class="row project-info">
 		<div class="project-img">
 			<img id="clowdersim-img" src="assets/projects_clowdersim.png"/>
 		</div>
-		<div class="project-blurb">
+		<div class="project-blurb">-->
 			<h3>status: just starting work</h3>
-			<p>just a neat little idea really but i've been messing with the idea of making a Warriors-inspired cat life sim.<br>you'd control your little group of cats (a clowder!) and decide how they live within their environment.<br>it's really early on so i don't want to promise too much but like, a lot of the inspiration is sims 3 warrior cats legacy challenges lol<br>as for technical details currently i'm planning on making it in Godot using C#.<br>if i stick with it long enough that there's a useable product, i'd be putting it up on itch.io most likely!<br>but that's a long ways out, and pretty wishful thinking. i hope i stick with it though! could be really neat!</p>
-		</div>
-	  </div>
+			<p>just a neat little idea really but i've been messing with the idea of making a Warriors-inspired cat life sim.<br>
+			you'd control your little group of cats (a clowder!) and decide how they live within their environment.<br>
+			it's really early on so i don't want to promise too much but like, a lot of the inspiration is sims 3 warrior cats legacy challenges lol<br>
+			as for technical details currently i'm planning on making it in Godot using C#.<br>
+			if i stick with it long enough that there's a useable product, i'd be putting it up on itch.io most likely!<br>
+			but that's a long ways out, and pretty wishful thinking. i hope i stick with it though! could be really neat!</p>
+		<!--</div>
+	  </div>-->
 	</div>
 </div>
 
-<div id="starboundmods" class="container column project-container dropdown-holder" onclick="showHide('starboundmods', 'showhide')">
-	<input id="starboundmods-attributes" type="hidden" value="status:hiatus,status:release,type:mod"></input>
-	<h2 class="project-title">clowder simulator <button class="nonbutton a" id="starboundmods-showhide">[show]</button></h2>
-	<div class="dropdown-contents">
-	  <div class="row project-info">
+<div id="starboundmods" class="container column project-container dropdown-holder" onclick="showHide('starboundmods', 'showhide')" style="display:none;">
+	<input id="starboundmods-attributes" type="hidden" value="status:discontinued,status:release,type:mod"/>
+	<h2 class="project-title">starbound mods <button class="nonbutton a" id="starboundmods-showhide">[show]</button></h2>
+	<div class="project-blurb dropdown-contents">
+	  <!--<div class="row project-info">
 		<div class="project-img">
 			<img id="starboundmods-img" src="assets/projects_starboundmods.png"/>
 		</div>
-		<div class="project-blurb">
-			<h3>status: semi-hiatus</h3>
-			<p>i started making mods for starbound uh... a long time ago. it technically wasn't the first game i <italic>tried</italic> to mod, but it was the first one i had any success with.<br>my first upload to starbound's steam workshop (aside from the now unlisted "Edited Gaster Blaster Mod") was Warrior Cats for Starbound in september of 2017!</p>
+		<div class="project-blurb">-->
+			<div class="row pair">
+				<h3>status: discontinued</h3>
+				<div class="v-divider"></div>
+				<h3>links: <a href="mods/starbound.html">[more info]</a></h3>
+			</div>
+			<p>i started making mods for starbound uh... a long time ago.<br>
+			it technically wasn't the first game i <italic>tried</italic> to mod - that honor goes to Minecraft - but it was the first one i had any success with.</p>
 			<p>however, i kinda just... don't really want to mod starbound much anymore for a whole host of reasons.<br>
-			for starters the main one is just that i don't enjoy playing the game much anymore.<br>like i used to be super into it and i'm not anymore, which is fine.<br>
-			but i think realizing how yikes the worldbuilding around and portrayal of the floran in particular (i don't really feel like going over it in detail, and it's not really my place to say either) was like the final shove over the edge into 'i don't really want to play this anymore.'<br>
-			it wasn't the <italic>only</italic> reason i stopped playing, and it's not the only yikes thing in that game either, but it definitely was that last nail in starbound's coffin for me.</p>
-			<p>but with that out of the way, yeah i made quite a few mods for starbound in the time i was at least a little into it.<br>honestly there was a large part of that time where i was just there to mod the game because the gameplay can be kinda repetitive and boring imo.<br>but anyway.</p>
-			<p>mods i've made include Warrior Cats for Starbound (and the beta version), The Crylik Race, I'd Like to Sit Here, Talimimus, Felicornus, the Lanthura, Vampycat's Plushies, and a few miscellaneous optional addons for those previously mentioned mods.<br>
-			Warrior Cats for Starbound, or the Catus mod as i often call it in my discord, was my first species mod for the game and it rather predictably added in cats you could play as, with a few objects and later plants based on or inspired by Warriors lore.<br>
-			(yes, i'm well aware Warriors has a good deal of its own issues which seem to grow in number over time. i don't condone any of that and try my best to keep my mod free of it when i become aware of it.)<br>
-			The Crylik Race (or the Crylan mod) was my second species mod, but they were my first <italic>original</italic> species. I actually made the first iteration of the Crylan mod before the Catus mod, but it was never uploaded and honestly i'm glad because it was during the weird, semi-uncanny transition point between the idea of Crylans as fairies or otherwise winged humanoids with magic, to the idea of Crylans as an anthro animal-like species. you're just going to have to trust me that it was weird! lol.<br>
-			but anyway! the version that was released to the workshop was after the transition to Crylans being furries, and they were these funny little bat/bird/dragon looking things that actually got a lot of love :) so i'm really glad i made the mod for that reason, because otherwise i don't think that Crylans would have gotten that recognition.<br>
-			after that i whipped up I'd Like to Sit Here in like, one afternoon i think. as opposed to my prior mods (and most that followed, too) which were all adding in new playable species, this one literally just let you sit on the floor. or on a box. or wherever you want, really, as long as you can place the invisible chair on the floor.<br>
-			that was seriously it. and because it was so simple but added in a bit of a level of immersion i guess it actually kind of blew up and i think it's still my most popular mod lol.<br>
-			after that I made the Talimimus mod! Talimimus was a bit different from my other species mods because it actually added in multiple species! and also they were mostly close to the regular humanoid body shape, so they could actually wear normal clothes. this is the one and only time that happened. lol.<br>
-			at first there were 2 species included but now there are 4: Stracirans, Werewolves, Aquoren, and Satyrs. it was kind of a mix of original-ish species (Stracirans and Aquoren) and creatures from myths and such (Werewolves and satyrs), because the concept actually came from a wacky little headworld i thought up and made like, a discord roleplay server for a while ago lol. basically this planet Talimimus was home to like a WHOLE BUNCH of different species, mostly humans and fantasy/mythical creatures like elves and satyrs and centaurs, but also the Stracirans and Aquoren. and the story idea was basically that the planet was overcrowded and having similar issues to Earth of like, climate change and stuff, and they decided the solution would be to just make a fleet of generation spaceships and send them off to any planet that seemed even potentially habitable.<br>
-			that whole concept never got translated fully over to starbound, but if it had it probably would have been through the high-tier player ships looking like those ship concepts i had, and maybe a few lore books. i dunno.<br>
-			but anyway it was a fun little idea, and i do really like the world idea still, even though it isn't super fleshed out.<br>
-			next up we have Felicornus! Felicorns weren't exactly an <italic>original</italic> species in terms of design, as they're pretty much just anthro cats with unicorn horns (feline + unicorn = felicorn), but they do actually have some lore which is neat. pretty much the only references to it are through my weak attempt at a magic system (that does basically no favors to my actual ideas, and in the end is basically just a money generator) and some NPC dialogue. however i do really like felicorns, i think they're super neat honestly.<br>
-			their lore is that they come from this planet named Chrombit-B, which is kind of on a similar technological scale to maybe early industrial-revolution Earth, but they got attacked by these weird creatures from space and then this space government superpower swooped in to 'save' them, as did a group rebelling against said space government. i don't have much for their lore aside from that because it was concieved as a background for my old fursona Crescent (who is now co-owned between me & my pal wybie) and they got scooped up by those rebels during that attack after they saved their village and have been living on a spaceship since.<br>
-			anyway for whatever reason when i made the sprites for the mod i decided to hashtag free the nipple and gave them belly nipples because why not. it was a choice i guess. i dunno. i don't have much to say about it really but it felt like something i should acknowledge.<br>
-			aside from the Belly Nips their most notable traits were being smaller than other characters (meaning they couldn't wear normal clothes, just like my other species lol...), having a horn, and cute little kitty faces.<br>
-			they're also actually my most fleshed out starbound mod species as far as i'm aware? i actually made multiple furniture items for them, though i don't think that's been published, i don't really remember. i kinda just got stuck in a spot where i don't have motivation to work on starbound mods, but there are things i've done already that just haven't been published because they aren't stable or because i was planning on including more content. i should probably just push the update as-is after making sure it's stable, because i'm just. not likely to make more content.<br>
-			anyway after that we had another surprisingly fleshed-out species, especially for their lack of lore: the Lanthura, or Vampycat's Gryphons.<br>
-			they had their own ship for the first tier, which was also true of Talimiman species but they all had the same ship with some variations (for both lore and laziness reasons). anyway this ship was kinda scrappy (intentionally) and I think that's kinda neat. aside from that though they didn't have anything other than 'hey look gryphons', but also 'hey look gryphons' is a great selling point imo.<br>
-			there were a good handful of beak options that were a bit more adventurous and brave than what the avians had for cusomization - we had beaks from hummingbird to screaming seagull to toucan - though the coloring stuff was a little funky.<br>
-			finally i released a little mod called vampycat's plushies. all it included were these little plushes of some of my characters because i decided to make sprites for them and decided not to shove them all into the felicornus mod like i was initially planning to.<br>
-			they were actually part of an abandoned plan to try to tie my mods together more. which i mean it's a bit sad that i abandoned it but again i just... don't play starbound, so why would it mod it anymore.<br>
-			oh well.
+			but i'll keep my rambling to a minimum here - after all, there's a whole page for my rambles up there now haha.
 			</p>
-		</div>
-	  </div>
+		<!--</div>
+	  </div>-->
 	</div>
 </div>
 
