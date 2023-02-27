@@ -13,7 +13,7 @@
 
 <div class="page-container" style="padding-bottom: 0.1px;">
 <button id="theme-button" class="row btn floating" onclick="toggleHighContrast()">
-	<img id="theme-button-icon" src="../assets/icons/eye.png" alt="improve visibility"></img>
+	<img id="theme-button-icon" src="../assets/icons/eye.png" alt="improve visibility"/>
 	<div id="theme-button-spacer" style="width: 0.5vw"></div>
 	<span id="theme-button-text">improve visibility</span>
 </button>
@@ -61,41 +61,41 @@
 	<h2 class="title">digital art</h2>
 	<h3>base prices</h3>
 	<div class="row gallery">
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('base-bust')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery02/2876eef2.jpg?v=6b03d9be">
-			<span>Bust flat color - $20</span>
+			<span>Bust flat color - $<span id="base-bust">#</span></span>
 		</div>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('base-halfbody')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery02/dedf487b.jpg?v=6b03d9be">
-			<span>Halfbody flat color - $30</span>
+			<span>Halfbody flat color - $<span id="base-halfbody">#</span></span>
 		</div>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('base-fullbody')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery01/5739fb1a.png?v=6b03d9be">
-			<span>Fullbody flat color - $50</span>
+			<span>Fullbody flat color - $<span id="base-fullbody">#</span></span>
 		</div>
 	</div>
 	
 	<h3>lineart texture options</h3>
 	<div class="row gallery mini">
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('lineart-cleansketch')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery02/a5fa5563.jpg?v=6b03d9be">
-			<span>Cleaned-up sketch - $0</span>
+			<span>Cleaned-up sketch - $<span id="lineart-cleansketch">#</span></span>
 		</div>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('lineart-fuzzy')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery01/73a9a683.jpg?v=6b03d9be">
-			<span>Rough / Fuzzy (default) - $0</span>
+			<span>Rough / Fuzzy (default) - $<span id="lineart-fuzzy">#</span></span>
 		</div>
 		<!--<div class="gallery-item">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery10/2aeae525.png?v=6b03d9be">
 			<span>Pixel lines</span>
 		</div>-->
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('lineart-scratchy')">
 			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/51028525_7EyYe3rmZJprgAH.png?1656091691">
-			<span>Scratchy - $5</span>
+			<span>Scratchy - $<span id="lineart-scratchy">#</span></span>
 		</div>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('lineart-tidy')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery01/b073c0bf.jpg?v=6b03d9be">
-			<span>Clean & Tidy - $10</span>
+			<span>Clean & Tidy - $<span id="lineart-tidy">#</span></span>
 		</div>
 	</div>
 	
@@ -104,33 +104,33 @@
 	<div class="column gallery mini">
 		<h3>shading</h3>
 		<span class="gallery-item">Shading comes in both cel and blended. Examples are cel shaded for clarity.</span>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('shading-simple')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery02/78964b63.jpg?v=6b03d9be">
 			<span>Simple shading - $<span id="shading-simple">#</span></span>
 		</div>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('shading-fullrender')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery01/ff242bbb.jpg?v=6b03d9be">
-			<span>Full rendering - $<span id="shading-fullrender">35</span></span>
+			<span>Fully rendered - $<span id="shading-fullrender">#</span></span>
 		</div>
 	</div>
 	
 	<div class="column gallery mini">
 		<h3>backgrounds</h3>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('backgrounds-simple')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery02/6c875e9b.jpg?v=6b03d9be">
-			<span>Simple background - $<span id="backgrounds-simple">0</span><br>
+			<span>Simple background - $<span id="backgrounds-simple">#</span><br>
 			(solid color, abstract shapes, gradient, etc)
 			</span>
 		</div>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('backgrounds-medium')">
 			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/56084309_mpdDZKQmumnAChh.png">
-			<span>Medium background - $35<br>
+			<span>Medium background - $<span id="backgrounds-medium">#</span><br>
 			(loose naturescape, space, sky, water, etc)
 			</span>
 		</div>
-		<div class="gallery-item">
+		<div class="gallery-item" onclick="addToCart('backgrounds-complex')">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery01/b53e93fb.jpg?v=6b03d9be">
-			<span>Complex background - $65<br>
+			<span>Complex background - $<span id="backgrounds-complex">#</span><br>
 			(like a room, lineless)
 			</span>
 		</div>
@@ -138,8 +138,8 @@
 	
 	<div class="column gallery mini">
 		<h3>misc</h3>
-		<div class="gallery-item">
-			<span>Complex design fee - Up to 20% of total.<br></span>
+		<div class="gallery-item" onclick="addToCart('complexdesign-max')">
+			<span>Complex design fee - Up to <span id="complexdesign-max">#</span>% of total.<br></span>
 			<span>Explanations & examples below. <button class="nonbutton a" id="complexdesign-showhide" onClick="showHide('complexdesign', 'showhide')">[show]</button></span>
 		</div>
 		<div id="complexdesign" class="dropdown-contents large">
@@ -165,7 +165,9 @@
 	<h2>this is a test price calculator, for ease of handing out quotes :)</h2>
 	<button onclick="quote()">count those prices</button>
 	<p id="cart">your selections go here</p>
-	<p id="total">total goes here</p>
+	<div id="total" class="container">
+		<span>your quote goes here</span>
+	</div>
 </div>
 
 <!--<div id="test" class="container confirm-required" onclick="confirmView('test', 'p')">(test, no mature content)This section may contain mature content. Show anyway?
@@ -173,6 +175,7 @@
 	<p>just a test!</p>
 	</div>
 </div>-->
+</div>
 
 <script src="../script.js"></script>
 <script src="../moneymachine.js"></script>
