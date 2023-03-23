@@ -156,6 +156,10 @@ function quote() {
 	const quoteAdd = [];
 	const quotePercent = [];
 
+	//reset moneymachine values
+	moneymachine.subtotal = 0;
+	moneymachine.total = 0;
+
 	//first, get our subtotal!
 	for (item of moneymachine.cart) {
 		if (getAction(item) == "add") {

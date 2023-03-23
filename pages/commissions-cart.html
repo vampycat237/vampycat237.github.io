@@ -3,11 +3,12 @@
 <head>
 	<title>vampycat237 [prices]</title>
 	<link rel="stylesheet" type="text/css" href="../style.css" />
-	
+	<link rel="icon" href="assets/favicon.ico">
+
 	<!--font stuff-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 </head>
 <body onload="loadTheme()">
 
@@ -74,90 +75,99 @@
 			<span>Fullbody flat color - $<span id="base-fullbody">#</span></span>
 		</div>
 	</div>
-	
+
+	<h2>add-ons</h2>
+
 	<h3>lineart texture options</h3>
-	<div class="row gallery mini">
-		<div class="gallery-item" onclick="addToCart('lineart-cleansketch')">
-			<img src="https://vampycat237.carrd.co/assets/images/gallery02/a5fa5563.jpg?v=6b03d9be">
-			<span>Cleaned-up sketch - $<span id="lineart-cleansketch">#</span></span>
-		</div>
-		<div class="gallery-item" onclick="addToCart('lineart-fuzzy')">
-			<img src="https://vampycat237.carrd.co/assets/images/gallery01/73a9a683.jpg?v=6b03d9be">
-			<span>Rough / Fuzzy (default) - $<span id="lineart-fuzzy">#</span></span>
-		</div>
-		<!--<div class="gallery-item">
+		<div class="row gallery mini">
+			<div class="gallery-item" onclick="addToCart('lineart-cleansketch')">
+				<img src="https://vampycat237.carrd.co/assets/images/gallery02/a5fa5563.jpg?v=6b03d9be">
+				<span>Cleaned-up sketch - $<span id="lineart-cleansketch">#</span></span>
+			</div>
+			<div class="gallery-item" onclick="addToCart('lineart-fuzzy')">
+				<img src="https://vampycat237.carrd.co/assets/images/gallery01/73a9a683.jpg?v=6b03d9be">
+				<span>Rough / Fuzzy (default) - $<span id="lineart-fuzzy">#</span></span>
+			</div>
+			<!--<div class="gallery-item">
 			<img src="https://vampycat237.carrd.co/assets/images/gallery10/2aeae525.png?v=6b03d9be">
 			<span>Pixel lines</span>
 		</div>-->
-		<div class="gallery-item" onclick="addToCart('lineart-scratchy')">
-			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/51028525_7EyYe3rmZJprgAH.png?1656091691">
-			<span>Scratchy - $<span id="lineart-scratchy">#</span></span>
+			<div class="gallery-item" onclick="addToCart('lineart-scratchy')">
+				<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/51028525_7EyYe3rmZJprgAH.png?1656091691">
+				<span>Scratchy - $<span id="lineart-scratchy">#</span></span>
+			</div>
+			<div class="gallery-item" onclick="addToCart('lineart-tidy')">
+				<img src="https://vampycat237.carrd.co/assets/images/gallery01/b073c0bf.jpg?v=6b03d9be">
+				<span>Clean & Tidy - $<span id="lineart-tidy">#</span></span>
+			</div>
 		</div>
-		<div class="gallery-item" onclick="addToCart('lineart-tidy')">
-			<img src="https://vampycat237.carrd.co/assets/images/gallery01/b073c0bf.jpg?v=6b03d9be">
-			<span>Clean & Tidy - $<span id="lineart-tidy">#</span></span>
-		</div>
-	</div>
-	
-	<div class="row gallery-holder">
-	
-	<div class="column gallery mini">
+
 		<h3>shading</h3>
 		<span class="gallery-item">Shading comes in both cel and blended. Examples are cel shaded for clarity.</span>
-		<div class="gallery-item" onclick="addToCart('shading-simple')">
-			<img src="https://vampycat237.carrd.co/assets/images/gallery02/78964b63.jpg?v=6b03d9be">
-			<span>Simple shading - $<span id="shading-simple">#</span></span>
+		<div class="row gallery mini">
+
+			<div class="gallery-item" onclick="addToCart('shading-simple')">
+				<img src="https://vampycat237.carrd.co/assets/images/gallery02/78964b63.jpg?v=6b03d9be">
+				<span>Simple shading - $<span id="shading-simple">#</span></span>
+			</div>
+			<div class="gallery-item" onclick="addToCart('shading-fullrender')">
+				<img src="https://vampycat237.carrd.co/assets/images/gallery01/ff242bbb.jpg?v=6b03d9be">
+				<span>Fully rendered - $<span id="shading-fullrender">#</span></span>
+			</div>
 		</div>
-		<div class="gallery-item" onclick="addToCart('shading-fullrender')">
-			<img src="https://vampycat237.carrd.co/assets/images/gallery01/ff242bbb.jpg?v=6b03d9be">
-			<span>Fully rendered - $<span id="shading-fullrender">#</span></span>
-		</div>
-	</div>
-	
-	<div class="column gallery mini">
+
 		<h3>backgrounds</h3>
-		<div class="gallery-item" onclick="addToCart('backgrounds-simple')">
-			<img src="https://vampycat237.carrd.co/assets/images/gallery02/6c875e9b.jpg?v=6b03d9be">
-			<span>Simple background - $<span id="backgrounds-simple">#</span><br>
-			(solid color, abstract shapes, gradient, etc)
-			</span>
+		<div class="row gallery mini">
+			<div class="gallery-item" onclick="addToCart('backgrounds-simple')">
+				<img src="https://vampycat237.carrd.co/assets/images/gallery02/6c875e9b.jpg?v=6b03d9be">
+				<span>
+					Simple background - $<span id="backgrounds-simple">#</span><br>
+					(solid color, abstract shapes, gradient, etc)
+				</span>
+			</div>
+			<div class="gallery-item" onclick="addToCart('backgrounds-medium')">
+				<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/56084309_mpdDZKQmumnAChh.png">
+				<span>
+					Medium background - $<span id="backgrounds-medium">#</span><br>
+					(loose naturescape, space, sky, water, etc)
+				</span>
+			</div>
+			<div class="gallery-item" onclick="addToCart('backgrounds-complex')">
+				<img src="https://vampycat237.carrd.co/assets/images/gallery01/b53e93fb.jpg?v=6b03d9be">
+				<span>
+					Complex background - $<span id="backgrounds-complex">#</span><br>
+					(like a room, lineless)
+				</span>
+			</div>
 		</div>
-		<div class="gallery-item" onclick="addToCart('backgrounds-medium')">
-			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/56084309_mpdDZKQmumnAChh.png">
-			<span>Medium background - $<span id="backgrounds-medium">#</span><br>
-			(loose naturescape, space, sky, water, etc)
-			</span>
+
+
+	<h2>fees</h2>
+
+	<div class="row gallery-holder">
+
+		<div class="column gallery mini">
+			<h3>complex design fee</h3>
+			<div class="gallery-item" onclick="addToCart('complexdesign-max')">
+				<span>Complex design fee - Up to <span id="complexdesign-max">#</span>% of total.<br></span>
+				<span>Explanations & examples below. <button class="nonbutton a" id="complexdesign-showhide" onClick="showHide('complexdesign', 'showhide')">[show]</button></span>
+			</div>
+			<div id="complexdesign" class="dropdown-contents large">
+				<div class="gallery-item">
+					<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/47008205_ZowBxaLEbhT4mH1.png">
+					<span>(This design has complex ripple patterns, lots of flowers, and detailed markings. He would probably get a 15% fee.)</span>
+				</div>
+				<div class="gallery-item">
+					<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/46490501_iOzbCIn8JYqXVz6.png">
+					<span>(The design on the right has a lot of consistently shaped spots, some two-toned. Mint would probably get a 6% fee.)</span>
+				</div>
+				<div class="gallery-item">
+					<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/38173044_Vt9CodT0EUGMgEo.png?1628481173">
+					<span>(This design has a multi-color gradient that's easy to mess up, and detailed stripes. It would probably get from a 10% fee to a 5% fee depending on how much I can simplify the stripes.)</span>
+				</div>
+			</div>
 		</div>
-		<div class="gallery-item" onclick="addToCart('backgrounds-complex')">
-			<img src="https://vampycat237.carrd.co/assets/images/gallery01/b53e93fb.jpg?v=6b03d9be">
-			<span>Complex background - $<span id="backgrounds-complex">#</span><br>
-			(like a room, lineless)
-			</span>
-		</div>
-	</div>
-	
-	<div class="column gallery mini">
-		<h3>misc</h3>
-		<div class="gallery-item" onclick="addToCart('complexdesign-max')">
-			<span>Complex design fee - Up to <span id="complexdesign-max">#</span>% of total.<br></span>
-			<span>Explanations & examples below. <button class="nonbutton a" id="complexdesign-showhide" onClick="showHide('complexdesign', 'showhide')">[show]</button></span>
-		</div>
-		<div id="complexdesign" class="dropdown-contents large">
-		  <div class="gallery-item">
-			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/47008205_ZowBxaLEbhT4mH1.png">
-			<span>(This design has complex ripple patterns, lots of flowers, and detailed markings. He would probably get a 15% fee.)</span>
-		  </div>
-		  <div class="gallery-item">
-			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/46490501_iOzbCIn8JYqXVz6.png">
-			<span>(The design on the right has a lot of consistently shaped spots, some two-toned. Mint would probably get a 6% fee.)</span>
-		  </div>
-		  <div class="gallery-item">
-			<img src="https://f2.toyhou.se/file/f2-toyhou-se/images/38173044_Vt9CodT0EUGMgEo.png?1628481173">
-			<span>(This design has a multi-color gradient that's easy to mess up, and detailed stripes. It would probably get from a 10% fee to a 5% fee depending on how much I can simplify the stripes.)</span>
-		  </div>
-		</div>
-	</div>
-	
+
 	</div>
 </div>
 
