@@ -12,6 +12,48 @@ const moneymachine = {
 	total : 0
 }
 
+//TODO: Implement CartItems & CartFees
+
+class CartItem {
+	//Value will generally be an integer here. (flat dollar amount)
+	constructor(name, value, layer) {
+		this.name = name;
+		this.friendlyName = name;
+
+		this.value = value;
+		this.layer = layer;
+
+		if (this.action == undefined) {
+			this.action = "add";
+		}
+	}
+
+	setFriendlyName(friendlyName) {
+		this.friendlyName = friendlyName;
+	}
+
+	getID() {
+		return this.layer + "-" + this.name;
+	}
+
+	getPrice() {
+		return this.value;
+	}
+}
+
+class CartFee extends CartItem {
+	//Value should take a float for this one. (percentage of subtotal)
+	constructor(name, value, layer) {
+		this.action = "percent";
+		
+		super(name, value, layer);
+	}
+
+	getPrice() {
+		return moneymachine.subtotal * this.value;
+	}
+}
+
 const prices = {
 	"digital" : {
 		"base" : {
@@ -32,12 +74,14 @@ const prices = {
 			"simple" : 10,
 			"fullrender" : 35
 		},
+		//TODO: change to "background" and adjust IDs accordingly, for tidiness
 		"backgrounds" : {
 			"action"  : "add",
 			"simple"  : 0,
 			"medium"  : 35,
 			"complex" : 65
 		},
+		//TODO: reformat this to fee : { action, complexdesign : [min, max] }
 		"complexdesign" : {
 			"action" : "percent",
 			"type"   : "range",
@@ -107,7 +151,7 @@ function getPercent(category) {
 
 //Returns the price of this fee based on the subtotal. Should only be called once the subtotal is finalized.
 function calculateFee(id) {
-	return subtotal * getPrice(id);
+	return moneymachine.subtotal * getPrice(id);
 }
 
 //Returns the action (add or percent) of the given item by looking it up from the price object
@@ -148,6 +192,12 @@ function addToCart(id) {
 	moneymachine.cart = moneymachine.cart.filter(item => !item.includes(id.substr(0, id.indexOf('-'))));
 	//add selected item to cart
 	moneymachine.cart.push(id);
+}
+
+//Removes any items of the selected category/layer from the cart.
+function removeFromCart(layer) {
+	//remove matching category items from cart
+	moneymachine.cart = moneymachine.cart.filter(item => !item.includes(layer));
 }
 
 //Counts up the cart, and updates the elements to verify work.

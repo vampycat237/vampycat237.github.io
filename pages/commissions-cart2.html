@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vampycat237 [prices]</title>
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+	<link rel="icon" href="assets/favicon.ico">
+
+	<!--font stuff-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,400&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+</head>
+<body onload="loadTheme()">
+
+	<div class="page-container" style="padding-bottom: 0.1px;">
+		<button id="theme-button" class="row btn floating" onclick="toggleHighContrast()">
+			<img id="theme-button-icon" src="../assets/icons/eye.png" alt="improve visibility" />
+			<div id="theme-button-spacer" style="width: 0.5vw"></div>
+			<span id="theme-button-text">improve visibility</span>
+		</button>
+
+		<div class="container header">
+			<h1 id="page-header">hi! i'm vampycat237</h1>
+			<h3 id="page-subheader">here you can find my commission info :)</h3>
+			<ul id="navbar" class="row btn-container">
+				<li><a class="btn" href="../index.html">home</a></li>
+				<li><a class="btn" href="#">art commissions</a></li>
+				<li><a class="btn" href="projects.html">my projects</a></li>
+				<li><a class="btn" href="https://ko-fi.com/vampycat237">tip jar / store</a></li>
+				<li><a class="btn" href="https://vampycat237.carrd.co/#contact">contact info</a></li>
+				<li><a class="btn" href="https://vampycat237.carrd.co/#socials">socials</a></li>
+				<li><a class="btn" href="help.html">help / guides</a></li>
+			</ul>
+		</div>
+
+		<div id="wip-notice" class="container">
+			<p>this page is a work in progress! for now you can find my prices <a href="https://vampycat237.carrd.co">on my carrd</a></p>
+		</div>
+
+		<div class="container">
+			<ul class="row btn-container">
+				<li><a class="btn" href="#">digital art</a></li>
+				<li><a class="btn" href="#">pixel art</a></li>
+				<li><a class="btn" href="#">3d models</a></li>
+				<li><a class="btn" href="#">character designs</a></li>
+				<li><a class="btn" href="#">web design</a></li>
+				<li><a class="btn" href="#">modding</a></li>
+			</ul>
+		</div>
+
+		<div id="filter" class="row container" style="display:none">
+			filter:
+			<select id="filter-menu">
+				<option value="null">[reset filter]</option>
+				<option value="status:open">open only</option>
+				<option value="status:semi-open">open and semi-open</option>
+				<option value="why">nothing</option>
+			</select>
+			<button onclick="filter('project-container',filterMenu.value)">apply filter</button>
+		</div>
+
+		<div id="digital" class="container column">
+			<h2 class="title">digital art</h2>
+		</div>
+
+		<div class="btn-container">
+			<button onclick="removeFromCart('shading')">shading: none</button>
+			<button onclick="addToCart('shading-fullrender')">shading: fullrender</button>
+		</div>
+
+		<div id="option-builder" class="container column">
+			<img id="ob-shading" src="../assets/_testing/ob_shading-null.png" />
+			<img id="ob-lineart" src="../assets/_testing/ob_lineart-fuzzy.png" />
+		</div>
+
+		<div id="moneymachine">
+			<h2>this is a test price calculator, for ease of handing out quotes :)</h2>
+			<button onclick="quote()">count those prices</button>
+			<p id="cart">your selections go here</p>
+			<div id="total" class="container">
+				<span>your quote goes here</span>
+			</div>
+		</div>
+
+		<!--<div id="test" class="container confirm-required" onclick="confirmView('test', 'p')">(test, no mature content)This section may contain mature content. Show anyway?
+		<div id="test-content">
+		<p>just a test!</p>
+		</div>
+	</div>-->
+	</div>
+
+	<script src="../script.js"></script>
+	<script src="../moneymachine.js"></script>
+	<script src="../js/optionbuilder.js"></script>
+
+	<style>
+		#option-builder {
+			height: 80vh;
+		}
+
+		#option-builder img {
+			position: absolute;
+			max-height: 100%;
+			width: unset;
+		}
+	</style>
+</body>
+</html>
