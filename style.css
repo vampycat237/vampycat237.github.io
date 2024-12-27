@@ -3,6 +3,7 @@
 :root {
 	--header_fill: #fff;
 	--pagecontainer_fill: #ffffffc0;
+	--card_fill: #fbf5ff;
 	
 	--dropdown_fill: #ffffff00;
 	--dropdownselected_fill: #ffffffa0;
@@ -25,6 +26,9 @@ body {
 	font-family: 'Source Sans Pro';
 	font-size: var(--font_size);
 	color: var(--textcolor);
+
+	backdrop-filter: blur(5px) contrast(0.5) brightness(0.8) saturate(1.5);
+  	margin: 0;
 }
 
 /*font styling*/
@@ -87,6 +91,10 @@ button.nonbutton {
 }
 */
 /*end font styling*/
+
+#page-header {
+	margin-top: 0.5em;
+}
 
 div.page-container {
 	background-color: var(--pagecontainer_fill);
@@ -214,6 +222,11 @@ li > .btn {
 	width: 100%;
 }
 
+ol > li, ul.bullets > li {
+	text-align: inherit;
+	display: revert;
+}
+
 /*dropdowns - swiped from my bayartcounter v2 with some edits*/
 .dropdown-holder {
 	flex-direction: column;
@@ -247,13 +260,18 @@ li > .btn {
 	max-height: 80vw;
 }
 
+/*section card*/
+section {
+	background-color: var(--card_fill);
+}
+
 /*floating buttons*/
 .btn.floating {
 	position: absolute;
 	top: 5px; right: 5px;
 }
 
-ul.stepguide {
+.stepguide {
 	width: 70%;
 	gap: 5%;
 	margin-top: 0.5%;

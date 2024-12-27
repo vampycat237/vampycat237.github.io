@@ -82,7 +82,7 @@ const themeHighContrast = {
 	pagecontainer_fill : "#e3daea",
 	
 	dropdown_fill: "#ffffff00",
-	dropdownselected_fill: "#ffffffff",
+	dropdownselected_fill: "#fcf8ff",
 	
 	textcolor: "#000",
 	acolor: "#50f",

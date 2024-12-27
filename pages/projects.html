@@ -19,8 +19,6 @@
 </button>
 
 <div class="container header">
-	<h1 id="page-header">vampycat237's projects</h1>
-	<h3 id="page-subheader">info about projects i'm working on or have completed!</h3>
 	<ul id="navbar" class="row btn-container">
 		<li><a class="btn" href="../index.html">home</a></li>
 		<li><a class="btn" href="termsofservice.html">art commissions</a></li>
@@ -29,11 +27,13 @@
 		<li><a class="btn" href="contact.html">contact info / socials</a></li>
 		<li><a class="btn" href="help.html">help / guides</a></li>
 	</ul>
+	<h1 id="page-header">vampycat237's projects</h1>
+	<h3 id="page-subheader">info about projects i'm working on or have completed!</h3>
 </div>
 
 <div id="filter" class="row container">filter: 
 	<select id="filter-menu">
-		<option value="fave:true">vampy's faves</option>
+		<option value="fave:true">featured</option>
 		<option value="status:indev">in development</option>
 		<option value="status:release">released</option>
 		<option value="type:web">websites/web apps</option>
@@ -43,6 +43,29 @@
 		<option value="null">everything</option>
 	</select>
 	<button onclick="filter('project-container',filterMenu.value)">apply filter</button>
+</div>
+
+<div id="vampyslab" class="container column project-container dropdown-holder selected" onclick="showHide('vampyslab', 'showhide')">
+	<input id="vampyslab-attributes" type="hidden" value="status:release,type:web,type:game,fave:true"/>
+	<h2 class="project-title">vampy's lab <button class="nonbutton a" id="vampyslab-showhide">[hide]</button></h2>
+	<div class="dropdown-contents">
+	  <div class="row project-info">
+		<div class="project-img">
+			<img id="vampyslab-img" src="https://i.imgur.com/KC93Dtx.png"/>
+		</div>
+		<div class="v-divider"></div>
+		<div class="project-blurb">
+			<div class="row pair">
+				<h3>status: ongoing</h3>
+				<div class="v-divider"></div>
+				<h3>links: <a href="https://vampycat237.github.io/experiments/">[site]</a> <a href="https://github.com/vampycat237/experiments">[source]</a></h3>
+			</div>
+			<p>
+				i don't want to write a blurb right now but you should look it's cool
+			</p>
+		</div>
+	  </div>
+	</div>
 </div>
 
 <div id="moonstruck" class="container column project-container dropdown-holder selected" onclick="showHide('moonstruck', 'showhide')">
@@ -60,7 +83,12 @@
 				<div class="v-divider"></div>
 				<h3>links: <a href="https://moonstruckdatingsim.tumblr.com/">[tumblr]</a></h3>
 			</div>
-			<p>i'm working on a visual novel dating simulator called Moonstruck!<br>you can learn more on the Moonstruck devblog :)<br>it's very early on in development so there is no release date.<br>i'm expecting it to take multiple years to get to the point where i feel comfortable giving a release date</p>
+			<p>
+				i'm working on a visual novel dating simulator called Moonstruck!<br>
+				you can learn more on the Moonstruck devblog :)<br>
+				it's very early on in development so there is no release date.<br>
+				i'm expecting it to take multiple years to get to the point where i feel comfortable giving a release date
+			</p>
 		</div>
 	  </div>
 	</div>
